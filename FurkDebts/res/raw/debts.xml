@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<debts>
+	<debt>
+		<debtId>1001</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>25</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1002</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>26</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1003</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>27</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1004</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>25</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1005</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>25</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1006</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>25</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1007</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>25</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1008</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>25</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1009</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>25</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1010</debtId>
+		<debtName>Chris</debtName>
+		<debtAmount>25</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1011</debtId>
+		<debtName>Not Chris</debtName>
+		<debtAmount>25.99</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1012</debtId>
+		<debtName>Three Five Point Zero Five</debtName>
+		<debtAmount>35.05</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	<debt>
+		<debtId>1013</debtId>
+		<debtName>Zero Point Five</debtName>
+		<debtAmount>0.5</debtAmount>
+		<comments>For being gay</comments>
+	</debt>
+	
+	
+	
+</debts>

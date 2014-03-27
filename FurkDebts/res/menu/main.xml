@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <item
+        android:id="@+id/action_create"
+        android:icon="@drawable/ic_action_create_note"
+        android:orderInCategory="100"
+        android:showAsAction="always|withText"
+        android:title="@string/action_create"
+        android:visible="true"/>
+    
+    <item
+        android:id="@+id/menu_sorting_header"
+        android:showAsAction="always"
+        android:icon="@drawable/ic_sort"
+        android:title="Sorting Options"
+        android:orderInCategory="101">
+
+    <menu>
+        <item
+            android:id="@+id/menu_sort_AtoZ"
+            android:title="A to Z"
+            android:orderInCategory="100"/>
+        <item
+            android:id="@+id/menu_sort_ZtoA"
+            android:title="Z to A"
+            android:orderInCategory="100"/>
+        <item
+            android:id="@+id/menu_sort_LowToHigh"
+            android:title="Low to High"
+            android:orderInCategory="100"/>
+        <item
+            android:id="@+id/menu_sort_HighToLow"
+            android:title="High To Low"
+            android:orderInCategory="100"/>
+    </menu>
+</item>
+    <item
+        android:id="@+id/action_settings"
+        android:orderInCategory="102"
+        android:showAsAction="never"
+        android:title="@string/settings_string"/>
+</menu>

@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/green_pastel_ish"
+    android:padding="8dp" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:layout_marginLeft="4dp"
+            android:layout_marginRight="4dp"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <com.makeramen.RoundedImageView
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/editDebtImageView"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_contact"
+                app:border_color="#000000"
+                app:border_width="1dp"
+                app:corner_radius="30dp"
+                app:is_oval="true"
+                app:round_background="true" />
+
+            <TextView
+                android:id="@+id/editDebtName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="sans-serif-light"
+                android:text="Debtors Name"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="25sp"
+                android:textStyle="italic" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="8dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:fontFamily="sans-serif-condensed"
+                android:text="$"
+                android:textSize="40sp" />
+
+            <EditText
+                android:id="@+id/editDebt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="00.00"
+                android:inputType="numberDecimal|numberSigned"
+                android:textColor="@color/holo_red_lighter"
+                android:textColorHint="@color/yellow_pastel_ish_trans"
+                android:textSize="50sp" >
+            </EditText>
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal" >
+
+            <Button
+                android:id="@+id/seven_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="7"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/eight_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="8"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/nine_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="4dp"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="9"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/four_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_margin="4dp"
+                android:layout_row="1"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="4"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/five_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="4dp"
+                android:layout_row="1"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="5"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/six_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_margin="4dp"
+                android:layout_row="1"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="6"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/one_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_margin="4dp"
+                android:layout_row="2"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="1"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/two_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="4dp"
+                android:layout_row="2"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="2"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/three_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_margin="4dp"
+                android:layout_row="2"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="3"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/decimal_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="0"
+                android:layout_margin="4dp"
+                android:layout_row="3"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="."
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/zero_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:layout_margin="4dp"
+                android:layout_row="3"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="0"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/dbl_zero_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="2"
+                android:layout_margin="4dp"
+                android:layout_row="3"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="00"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="40sp" />
+
+            <Button
+                android:id="@+id/clear_debt_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_margin="4dp"
+                android:layout_row="1"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="Clear"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="20sp"
+                 />
+
+            <Button
+                android:id="@+id/addToDebt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_margin="4dp"
+                android:layout_row="3"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="@string/add_debt_string"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="18sp" />
+            <Button
+                android:id="@+id/subFromDebt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_column="3"
+                android:layout_margin="4dp"
+                android:layout_row="2"
+                android:background="@drawable/btn_bg_selector"
+                android:fontFamily="sans-serif-condensed"
+                android:padding="4dp"
+                android:text="@string/subtract_from_debt_string"
+                android:textColor="@color/holo_gray_dark"
+                android:textSize="18sp" />
+        </GridLayout>
+    </LinearLayout>
+
+</RelativeLayout>

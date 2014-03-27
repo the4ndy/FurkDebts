@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/card_bg_selector"
+	>
+
+ <com.makeramen.RoundedImageView
+     android:layout_width="75dp"
+     android:layout_height="75dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/listImageView"
+        android:scaleType="centerCrop"
+        android:padding="8dp"
+        app:corner_radius="30dp"
+        app:border_width="2dp"
+        app:border_color="#000000"
+        app:round_background="true"
+        app:is_oval="true" />
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" 
+        >
+        
+        <TextView 
+            android:id="@+id/debtorsName"
+            android:layout_width="wrap_content" 
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            />
+        
+        <TextView 
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/currentDebt"
+            android:textColor="@color/holo_red_light"
+            android:textStyle="bold"
+            android:fontFamily="sans-serif-condensed"
+            android:textSize="35sp"
+            />
+        
+        
+    </LinearLayout>
+
+</LinearLayout>

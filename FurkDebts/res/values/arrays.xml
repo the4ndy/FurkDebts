@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="defaultImageNamesArray">
+        <item>Bart Simpson</item>
+        <item>Spiderman</item>
+        <item>Playboy Bunny</item>
+        <item>Mario</item>
+        <item>Homer Simpson</item>
+        <item>Gandalf</item>
+        <item>Batman</item>
+		<item>Storm Trooper</item>        
+        
+    </string-array>
+    <string-array name="animationStyleArray">
+        <item >Alpha</item>
+        <item >From Right</item>
+        <item >From Left</item>
+        <item >From Bottom</item>
+        <item >Scale</item>
+        
+    </string-array>
+    
+    <string-array name="filterOptions">
+        <item >Alphabetical: A to Z</item>
+        <item >Alphabetical: Z to A</item>
+        <item >Amount Owed: Ascending</item>
+        <item >Amount Owed: Descending</item>
+    </string-array>
+    <string-array name="filterOptionsValues">
+        <item >1</item>
+        <item >2</item>
+        <item >3</item>
+        <item >4</item>
+    </string-array>
+        
+    
+</resources>

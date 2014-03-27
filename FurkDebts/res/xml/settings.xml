@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Animation Control" >
+        <ListPreference
+            android:entries="@array/animationStyleArray"
+            android:entryValues="@array/animationStyleArray"
+            android:key="pref_animation_style"
+            android:title="List Animation Style" />
+
+        <CheckBoxPreference
+            android:key="pref_show_anim"
+            android:summary="Animate list item entry if checked"
+            android:title="Show List Animations" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="List Options" >
+        <ListPreference
+            android:entries="@array/filterOptions"
+            android:entryValues="@array/filterOptionsValues"
+            android:key="pref_default_filter"
+            android:title="Default Sorting Option" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

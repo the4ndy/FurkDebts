@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+
+    <string name="app_name">Furk Debts</string>
+    
+ 
+    
+    <string name="action_create">New Note</string>
+
+    <string name="edit_text_hint">Type Note Here...</string>
+
+    <string name="empty_state_title_text">Create a New Note +</string>
+
+    <string name="empty_state_body_text">To create a new note touch the button below or the + in the action bar. Remember to hit the save button to commit your changes, or simply swipe away the window to hide the view.</string>
+
+    <string name="new_note_button_text">New Note</string>
+
+    <string name="action_save">Save Note</string>
+
+    <string name="settings_string">Settings</string>
+
+    <string name="edit_debt_string">Edit</string>
+
+    <string name="debtors_name_hint_string"><i>Input Debtor\'s Name</i></string>
+
+    <string name="subtract_from_debt_string">Remove\nDebt</string>
+
+    <string name="add_debt_string">Add Debt</string>
+
+</resources>
