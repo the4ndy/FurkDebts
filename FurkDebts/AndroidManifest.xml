@@ -4,9 +4,17 @@
     android:versionCode="2"
     android:versionName="1.5" >
 
+    <!-- 
+    API 14 is the first API version in the Ice Cream Sandwich release 
+    Before this version ActionBarSherlock (and other compatibility libraries)
+    	are needed for basic functions (many design related)	
+    -->
+    
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="19" />
+    
+    <!-- Uses this permission to get Name and Picture from contats -->
     <uses-permission android:name="android.permission.READ_CONTACTS"/>
 
     <application
