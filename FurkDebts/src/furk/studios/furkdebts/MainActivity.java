@@ -1,13 +1,13 @@
 /*
+ * LICENSE
+ * 
+ * Furk Debts
+ * 
  * MainActivity.java
  * 
- * Copyright (C) 2013 6 Wunderkinder GmbH.
+ * Copyright (C) 2014 Furk Studios.
  * 
- * @author      Jose L Ugia - @Jl_Ugia
- * @author      Antonio Consuegra - @aconsuegra
- * @author      Cesar Valiente - @CesarValiente
- * @author      Benedikt Lehnert - @blehnert
- * @author      Timothy Achumba - @iam_timm
+ * @author      S "Andy" Schilder - @andyschilder
  * @version     1.0
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
