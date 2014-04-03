@@ -1,22 +1,34 @@
 package furk.studios.furkdebts;
 
+import java.io.IOException;
 import java.text.NumberFormat;
 import java.util.Locale;
 
+import com.makeramen.RoundedImageView;
+
+import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources.NotFoundException;
+import android.graphics.Bitmap;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.net.Uri;
 import android.os.Bundle;
+import android.provider.MediaStore;
+import android.text.SpannableString;
+import android.text.style.ForegroundColorSpan;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
-
-import com.makeramen.RoundedImageView;
-
+import furk.studios.furkdebts.color.ColorArt;
+import furk.studios.furkdebts.color.FadingImageView;
 import furk.studios.furkdebts.db.DebtsDataSource;
 import furk.studios.furkdebts.model.Debt;
 
@@ -26,7 +38,8 @@ public class EditDebt extends Activity {
 	private static final int SUB_FROM_DEBT = 1002;
 
 	Debt debt;
-	RoundedImageView mImageView;
+	FadingImageView mImageView;
+	RoundedImageView rImageView;
 	EditText mEditDebt;
 	TextView mNameView;
 	Button clearDebt;
@@ -35,7 +48,9 @@ public class EditDebt extends Activity {
 	NumberFormat nf;
 	DebtsDataSource datasource;
 	Float debtAtStart;
-
+	ColorArt cs;
+	
+	
 	Button one;
 	Button two;
 	Button three;
@@ -51,6 +66,7 @@ public class EditDebt extends Activity {
 
 	boolean hasDecimal = false;
 	int numAfterDecimal = 0;
+	RelativeLayout mLayout;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -69,6 +85,15 @@ public class EditDebt extends Activity {
 		debtAtStart = debt.getDebt();
 
 		bindViews();
+		try {
+			setColors();
+		} catch (NotFoundException e) {
+			Log.v("FURKception", "NotFoundException : " + e);
+			e.printStackTrace();
+		} catch (IOException e) {
+			Log.v("FURKception", "IOException : " + e);
+			e.printStackTrace();
+		}
 		setClickListeners();
 		refreshDisplay();
 
@@ -85,19 +110,23 @@ public class EditDebt extends Activity {
 				hasDecimal = false;
 			}
 		});
-		
+
 		addToDebt.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				saveAndFinish(ADD_TO_DEBT);
+				if (!mEditDebt.getText().toString().isEmpty()) {
+					saveAndFinish(ADD_TO_DEBT);
+				}
 			}
 		});
 		subFromDebt.setOnClickListener(new OnClickListener() {
-			
+
 			@Override
 			public void onClick(View v) {
-				saveAndFinish(SUB_FROM_DEBT);
+				if (!mEditDebt.getText().toString().isEmpty()) {
+					saveAndFinish(SUB_FROM_DEBT);
+				}
 			}
 		});
 
@@ -299,13 +328,13 @@ public class EditDebt extends Activity {
 		Log.v("FURK", "Save and Finish");
 
 		float f = Float.parseFloat(mEditDebt.getText().toString());
-		
+
 		Intent intent = new Intent();
-				
+
 		switch (i) {
 		case ADD_TO_DEBT:
 			datasource.logDebtHistory(debt, debtAtStart);
-			debt.setDebt(debtAtStart+f);
+			debt.setDebt(debtAtStart + f);
 			datasource.updateEntry(debt, debt.getId());
 			intent.putExtra(".model.Debt", debt);
 			setResult(RESULT_OK, intent);
@@ -314,8 +343,8 @@ public class EditDebt extends Activity {
 			break;
 		case SUB_FROM_DEBT:
 			datasource.logDebtHistory(debt, debtAtStart);
-			
-			debt.setDebt(debtAtStart-f);
+
+			debt.setDebt(debtAtStart - f);
 			datasource.updateEntry(debt, debt.getId());
 			intent.putExtra(".model.Debt", debt);
 			setResult(RESULT_OK, intent);
@@ -330,13 +359,16 @@ public class EditDebt extends Activity {
 
 		nf = NumberFormat.getCurrencyInstance(Locale.getDefault());
 
-		mImageView = (RoundedImageView) findViewById(R.id.editDebtImageView);
+		mLayout = (RelativeLayout) findViewById(R.id.editDebtParentLayout);
 
+		mImageView = (FadingImageView) findViewById(R.id.editDebtImageView);
+		rImageView = (RoundedImageView) findViewById(R.id.editDebtRoundImageView);
+		
 		mNameView = (TextView) findViewById(R.id.editDebtName);
 
 		mEditDebt = (EditText) findViewById(R.id.editDebt1);
 
-		clearDebt = (Button) findViewById(R.id.clear_debt_button);
+		clearDebt = (Button) findViewById(R.id.clear_debt_btn);
 
 		addToDebt = (Button) findViewById(R.id.addToDebt);
 		subFromDebt = (Button) findViewById(R.id.subFromDebt);
@@ -354,12 +386,29 @@ public class EditDebt extends Activity {
 		zero = (Button) findViewById(R.id.zero_btn);
 		dblZero = (Button) findViewById(R.id.dbl_zero_btn);
 
+		refreshDisplay();
 	}
 
 	private void refreshDisplay() {
-		// mEditDebt.setText(nf.format(debt.getDebt()).replace("$", ""));
+
 		mNameView.setText(debt.getName());
-		mImageView.setImageURI(Uri.parse(debt.getAvatar()));
+
+		if (debt.getAvatar().length() > 0) {
+			if (debt.getAvatar().contains("default")) {
+				int imageResource = getResources().getIdentifier(
+						debt.getAvatar(), "drawable", getPackageName());
+
+				if (imageResource != 0) {
+					mImageView.setVisibility(View.GONE);
+					rImageView.setVisibility(View.VISIBLE);
+					rImageView.setImageResource(imageResource);
+				}
+			} else {
+				rImageView.setVisibility(View.GONE);
+				mImageView.setVisibility(View.VISIBLE);
+				mImageView.setImageURI(Uri.parse(debt.getAvatar()));
+			}
+		}
 
 	}
 
@@ -380,6 +429,143 @@ public class EditDebt extends Activity {
 
 		setResult(RESULT_CANCELED);
 		finish();
+
+	}
+
+	public void initBtnColor(ColorArt scheme) {
+
+		Button[] array = { one, two, three, four, five, six, seven, eight,
+				nine, zero, dblZero, clearDebt, addToDebt, subFromDebt, decimal };
+
+		ImageView[] arrayImages = {
+				(ImageView) findViewById(R.id.clearImageView),
+				(ImageView) findViewById(R.id.addImageView),
+				(ImageView) findViewById(R.id.subImageView),
+				(ImageView) findViewById(R.id.oneImageView),
+				(ImageView) findViewById(R.id.twoImageView),
+				(ImageView) findViewById(R.id.threeImageView),
+				(ImageView) findViewById(R.id.fourImageView),
+				(ImageView) findViewById(R.id.fiveImageView),
+				(ImageView) findViewById(R.id.sixImageView),
+				(ImageView) findViewById(R.id.sevenImageView),
+				(ImageView) findViewById(R.id.eightImageView),
+				(ImageView) findViewById(R.id.nineImageView),
+				(ImageView) findViewById(R.id.zeroImageView),
+				(ImageView) findViewById(R.id.dblZeroImageView),
+				(ImageView) findViewById(R.id.decimalImageView) };
+
+		for (int i = 0; i < array.length; i++) {
+			int resId = array[i].getId();
+			Log.v("FURK", "" + resId);
+			TextView tv = (TextView) findViewById(resId);
+			tv.setTextColor(scheme.getPrimaryColor());
+		}
+
+		for (int i = 0; i < arrayImages.length; i++) {
+			arrayImages[i].setBackgroundColor(scheme.getDetailColor());
+		}
+
+	}
+
+	public void setColors() throws NotFoundException, IOException {
+	
+		if (debt.getAvatar().contains("default_contact")){			
+			mImageView.setVisibility(View.GONE);
+			rImageView.setVisibility(View.VISIBLE);
+		} else {
+		if (getColorScheme(debt.getAvatar()) != null) {
+
+			cs = getColorScheme(debt.getAvatar());
+			initBtnColor(cs);
+
+			mEditDebt.setHintTextColor(halfTransparentColor(cs
+					.getSecondaryColor()));
+			mEditDebt.setTextColor(cs.getSecondaryColor());
+			TextView t = (TextView) findViewById(R.id.dollaSign);
+			t.setTextColor(cs.getPrimaryColor());
+			mNameView.setTextColor(cs.getPrimaryColor());
+
+			mImageView.setBackgroundColor(cs.getBackgroundColor(),
+					FadingImageView.FadeSide.CIRCLE);
+
+			mLayout.setBackgroundColor(cs.getBackgroundColor());
+
+			ActionBar bar = getActionBar();
+			bar.setBackgroundDrawable(new ColorDrawable(cs.getBackgroundColor()));
+			bar.setDisplayShowTitleEnabled(false);
+			bar.setDisplayShowTitleEnabled(true);
+
+			SpannableString title = new SpannableString(getTitle());
+			title.setSpan(new ForegroundColorSpan(cs.getDetailColor()), 0,
+					getTitle().length(), 0);
+			bar.setTitle(title);
+
+		} 
+		}
+	}
+
+	public ColorArt getColorScheme(String uri) throws IOException {
+
+		Bitmap bitmap = null;
+
+		bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(),
+				Uri.parse(debt.getAvatar()));
+
+		if (bitmap != null) {
+
+			ColorArt color = new ColorArt(bitmap);
+			/**
+			 * 
+			 * Test the color scheme
+			 * 
+			 * for (int i = 0; i < 4; i++){ ImageView iv; switch (i) { case 0:
+			 * iv = (ImageView) findViewById(R.id.imageColor0);
+			 * iv.setBackgroundColor(color.getPrimaryColor()); break; case 1: iv
+			 * = (ImageView) findViewById(R.id.imageColor1);
+			 * iv.setBackgroundColor(color.getSecondaryColor()); break; case 2:
+			 * iv = (ImageView) findViewById(R.id.imageColor2);
+			 * iv.setBackgroundColor(color.getBackgroundColor()); break; case 3:
+			 * iv = (ImageView) findViewById(R.id.imageColor3);
+			 * iv.setBackgroundColor(color.getDetailColor()); break; } }
+			 */
+
+			return color;
+
+		} else {
+			return null;
+		}
+	}
+
+	public int halfTransparentColor(int color) {
+		String hexColor = Integer.toHexString(color);
+		String newHexColor = "#80";
+		Log.d("FURK Hex Color", hexColor);
+		char[] array = hexColor.toCharArray();
+		for (int i = 2; i < hexColor.length(); i++) {
+			newHexColor = newHexColor + array[i];
+		}
+		int newColor = Color.parseColor(newHexColor);
+		return newColor;
+
+	}
+	
+	public boolean isDark(int color) {
+		if (android.R.color.transparent == color)
+			return true;
+
+		int[] rgb = { Color.red(color), Color.green(color), Color.blue(color) };
+
+		int brightness = (int) Math.sqrt(rgb[0] * rgb[0] * .241 + rgb[1]
+				* rgb[1] * .691 + rgb[2] * rgb[2] * .068);
+
+		Log.v("FURK", "COLOR: " + color + ", BRIGHT: " + brightness);
+
+		// color is dark
+		if (brightness <= 130) {
+			return true;
+		} else {
+			return false;
+		}
 
 	}
 

@@ -1,6 +1,7 @@
 package furk.studios.furkdebts;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -48,6 +49,7 @@ public class ValueLabelAdapter extends com.fima.chartview.LabelAdapter {
 		labelTextView.setGravity(gravity);
 		labelTextView.setPadding(8, 0, 8, 0);
 		labelTextView.setText(String.format("%.2f", getItem(position)));
+		labelTextView.setTextColor(Color.DKGRAY);
 
 		return convertView;
 	}

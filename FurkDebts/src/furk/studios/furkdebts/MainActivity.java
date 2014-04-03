@@ -23,6 +23,7 @@
  * limitations under the License.
  */
 
+
 package furk.studios.furkdebts;
 
 import java.util.List;
@@ -57,28 +58,46 @@ import furk.studios.furkdebts.model.Debt;
 
 public class MainActivity extends Activity {
 
+	//Constants, number values can be any number and are only used for accountibility
 	private static final int EDITOR_ACTIVITY_REQUEST = 1001;
 	private static final int MENU_DELETE_ID = 1002;
+	
+	//Contant strings for the SharedPreferences, 
+		//SORT_OPTIONS is used somewhere, despite the given warnings, I swear!
 	private static final String LIST_ANIMATION_STYLE = "pref_animation_style";
 	private static final String SHOW_LIST_ANIM = "pref_show_anim";
 	private static final String SORT_OPTIONS = "pref_default_filter";
+	
+	//int used to keep track of current filtering options
 	private int currentFilter = 0;
+	
+	//View variables
 	private ListView mListView;
 	private int currentDebtorId;
+	//Datasource variable
 	DebtsDataSource datasource;
+	//SharedPreferences variable
 	private SharedPreferences settings;
+	//List of custom "Debt" objects
 	List<Debt> debts;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_listview);
-
+		
+		//Returns the "Key/Value" pairs of the application's shared preferences data store
 		settings = PreferenceManager.getDefaultSharedPreferences(this);
 
+		//Initiate the list with the list from "activity_listview"
 		mListView = (ListView) findViewById(android.R.id.list);
+		//
 		registerForContextMenu(mListView);
-		mListView.setEmptyView(findViewById(R.id.empty_state));
+		
+		//Doesn't seem to work, empty state is a view in activity_main
+		// activity_main was deleted set new empty view
+		//mListView.setEmptyView(findViewById(R.id.empty_state));
+		
 		mListView.setOnItemClickListener(new OnItemClickListener() {
 
 			@Override

@@ -1,127 +1,153 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:chartview="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:chartview="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background_tile"
-    android:orientation="vertical"
-    android:padding="10dp" >
+    android:padding="0dp" >
 
-    <LinearLayout
+    <RelativeLayout
+        android:id="@+id/debtDetailParentRelativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:background="@drawable/card_bg"
-        android:orientation="horizontal"
-        android:padding="8dp" >
+        android:layout_height="match_parent"
+        android:layout_margin="0dp"
+        android:paddingLeft="10dp" 
+        android:paddingRight="10dp" 
+        android:paddingBottom="10dp" 
+        android:paddingTop="0dp" >
 
-        <com.makeramen.RoundedImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/avatarImageView1"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            app:border_color="#000000"
-            app:border_width="2dp"
-            app:corner_radius="30dp"
-            app:is_oval="true"
-            app:round_background="true" />
-
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="4dp"
-            android:orientation="vertical"
-            android:padding="4dp" >
-
-            <TextView
-                android:id="@+id/nameText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="top"
-                android:layout_marginBottom="4dp"
-                android:fontFamily="sans-serif-light"
-                android:textSize="25sp"
-                android:textStyle="italic" />
-
-            <TextView
-                android:id="@+id/debtText"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:fontFamily="sans-serif-condensed"
-                android:textColor="@color/holo_red_lighter"
-                android:textSize="30sp"
-                android:textStyle="bold" />
-        </LinearLayout>
-    </LinearLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" >
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:layout_height="match_parent" >
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
-                android:background="@drawable/card_bg"
-                android:orientation="vertical"
-                android:padding="8dp" >
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="sans-serif-light"
-                    android:text="Comments"
-                    android:textColor="@color/holo_green_light"
-                    android:textSize="20sp"
-                    android:textStyle="italic" />
-
-                <TextView
-                    android:id="@+id/commentsText"
-                    android:layout_width="fill_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="8dp"
-                    android:layout_marginLeft="16dp"
-                    android:layout_marginTop="8dp"
-                    android:textSize="15sp" />
-            </LinearLayout>
-
-            <ListView
-                android:id="@+id/historyListView"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:background="@drawable/card_bg"
-                android:layout_marginBottom="8dp" >
-            </ListView>
-
-            <RelativeLayout
                 android:layout_height="match_parent"
-                android:layout_width="wrap_content"
-                android:background="@drawable/card_bg"
-                android:padding="16dp">
-                
-                <com.fima.chartview.ChartView
-        android:id="@+id/lineGraph1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_margin="8dp"
-        chartview:bottomLabelHeight="20dp"
-        chartview:gridLineColor="#E5E5E5"
-        chartview:gridLineWidth="1dp"
-        chartview:gridLinesHorizontal="5"
-        chartview:gridLinesVertical="5"
-        chartview:leftLabelWidth="56dp" />
-                
-            </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
+                android:orientation="vertical"
+                android:padding="0dp" >
 
-</LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="0dp"
+                    android:orientation="horizontal"
+                    android:padding="8dp" >
+
+                    <com.makeramen.RoundedImageView
+                        xmlns:app="http://schemas.android.com/apk/res-auto"
+                        android:id="@+id/avatarImageView1"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="8dp"
+                        android:scaleType="centerCrop"
+                        app:border_color="#000000"
+                        app:border_width="2dp"
+                        app:corner_radius="30dp"
+                        app:is_oval="true"
+                        app:round_background="true" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="4dp"
+                        android:orientation="vertical"
+                        android:padding="4dp" >
+
+                        <TextView
+                            android:id="@+id/nameText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="top"
+                            android:layout_marginBottom="2dp"
+                            android:fontFamily="sans-serif-light"
+                            android:textSize="30sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/debtText"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="16dp"
+                            android:fontFamily="sans-serif-condensed"
+                            android:text="DEBT"
+                            android:textColor="@color/holo_red_dark"
+                            android:textSize="30sp"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <Space
+                        android:layout_width="match_parent"
+                        android:layout_height="8dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/transparent"
+                        android:orientation="vertical"
+                        android:padding="8dp" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="sans-serif-light"
+                            android:text="Comments"
+                            android:id="@+id/commentsTextTitle"
+                            android:textColor="@color/holo_green_light"
+                            android:textSize="20sp"
+                            android:textStyle="italic" />
+
+                        <TextView
+                            android:id="@+id/commentsText"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="8dp"
+                            android:layout_marginLeft="16dp"
+                            android:layout_marginTop="8dp"
+                            android:textSize="15sp" />
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/historyListView"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:layout_marginBottom="8dp"
+                        android:background="@color/transparent" >
+                    </ListView>
+
+                    <RelativeLayout
+                        android:id="@+id/chartViewParent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/transparent"
+                        android:padding="16dp" >
+
+                        <com.fima.chartview.ChartView
+                            android:id="@+id/lineGraph1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_centerHorizontal="true"
+                            android:layout_centerVertical="true"
+                            android:layout_margin="8dp"
+                            chartview:bottomLabelHeight="20dp"
+                            chartview:gridLineColor="#E5E5E5"
+                            chartview:gridLineWidth="1dp"
+                            chartview:gridLinesHorizontal="5"
+                            chartview:gridLinesVertical="5"
+                            chartview:leftLabelWidth="56dp" />
+                    </RelativeLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+
+</RelativeLayout>

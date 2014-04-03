@@ -32,6 +32,7 @@
     <color name="holo_gray_dark">#ff222222</color>
     <color name="custom_gray">#ff777777</color>
     <color name="transparent">#00000000</color>
+    <color name="transparent_ish">#33ffffff</color>
     
     <color name="green_pastel_ish">#ff4FBA6F</color>
     <color name="yellow_pastel_ish">#ffF3EA11</color>

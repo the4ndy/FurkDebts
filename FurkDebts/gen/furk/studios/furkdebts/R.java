@@ -9,14 +9,14 @@ package furk.studios.furkdebts;
 
 public final class R {
     public static final class array {
-        public static final int animationStyleArray=0x7f090001;
-        public static final int defaultImageNamesArray=0x7f090000;
-        public static final int filterOptions=0x7f090002;
-        public static final int filterOptionsValues=0x7f090003;
-        public static final int pref_example_list_titles=0x7f090004;
-        public static final int pref_example_list_values=0x7f090005;
-        public static final int pref_sync_frequency_titles=0x7f090006;
-        public static final int pref_sync_frequency_values=0x7f090007;
+        public static final int animationStyleArray=0x7f080001;
+        public static final int defaultImageNamesArray=0x7f080000;
+        public static final int filterOptions=0x7f080002;
+        public static final int filterOptionsValues=0x7f080003;
+        public static final int pref_example_list_titles=0x7f080004;
+        public static final int pref_example_list_values=0x7f080005;
+        public static final int pref_sync_frequency_titles=0x7f080006;
+        public static final int pref_sync_frequency_values=0x7f080007;
     }
     public static final class attr {
         /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
@@ -134,55 +134,56 @@ in (inches), mm (millimeters).
         public static final int topLabelHeight=0x7f010006;
     }
     public static final class color {
-        public static final int apptheme_color=0x7f0a0013;
-        public static final int custom_gray=0x7f0a000e;
-        public static final int green_pastel_ish=0x7f0a0010;
+        public static final int apptheme_color=0x7f090014;
+        public static final int custom_gray=0x7f09000e;
+        public static final int green_pastel_ish=0x7f090011;
         /**  A really bright Holo shade of blue 
          */
-        public static final int holo_blue_bright=0x7f0a000b;
+        public static final int holo_blue_bright=0x7f09000b;
         /**  A dark Holo shade of blue 
          */
-        public static final int holo_blue_dark=0x7f0a0005;
+        public static final int holo_blue_dark=0x7f090005;
         /**  A light Holo shade of blue 
          */
-        public static final int holo_blue_light=0x7f0a0000;
+        public static final int holo_blue_light=0x7f090000;
         /**  A really bright Holo shade of gray 
          */
-        public static final int holo_gray_bright=0x7f0a000c;
-        public static final int holo_gray_dark=0x7f0a000d;
+        public static final int holo_gray_bright=0x7f09000c;
+        public static final int holo_gray_dark=0x7f09000d;
         /**  A light Holo shade of gray 
          */
-        public static final int holo_gray_light=0x7f0a0001;
+        public static final int holo_gray_light=0x7f090001;
         /**  A dark Holo shade of green 
          */
-        public static final int holo_green_dark=0x7f0a0006;
+        public static final int holo_green_dark=0x7f090006;
         /**  A light Holo shade of green 
          */
-        public static final int holo_green_light=0x7f0a0002;
+        public static final int holo_green_light=0x7f090002;
         /**  A dark Holo shade of orange 
          */
-        public static final int holo_orange_dark=0x7f0a000a;
+        public static final int holo_orange_dark=0x7f09000a;
         /**  A light Holo shade of orange 
          */
-        public static final int holo_orange_light=0x7f0a0009;
+        public static final int holo_orange_light=0x7f090009;
         /**  A Holo shade of purple 
          */
-        public static final int holo_purple=0x7f0a0008;
+        public static final int holo_purple=0x7f090008;
         /**  A dark Holo shade of red 
          */
-        public static final int holo_red_dark=0x7f0a0007;
+        public static final int holo_red_dark=0x7f090007;
         /**  A light Holo shade of red 
          */
-        public static final int holo_red_light=0x7f0a0003;
-        public static final int holo_red_lighter=0x7f0a0004;
-        public static final int transparent=0x7f0a000f;
-        public static final int yellow_pastel_ish=0x7f0a0011;
-        public static final int yellow_pastel_ish_trans=0x7f0a0012;
+        public static final int holo_red_light=0x7f090003;
+        public static final int holo_red_lighter=0x7f090004;
+        public static final int transparent=0x7f09000f;
+        public static final int transparent_ish=0x7f090010;
+        public static final int yellow_pastel_ish=0x7f090012;
+        public static final int yellow_pastel_ish_trans=0x7f090013;
     }
     public static final class dimen {
-        public static final int layer_width=0x7f0b0001;
-        public static final int offset_width=0x7f0b0002;
-        public static final int shadow_width=0x7f0b0000;
+        public static final int layer_width=0x7f0a0001;
+        public static final int offset_width=0x7f0a0002;
+        public static final int shadow_width=0x7f0a0000;
     }
     public static final class drawable {
         public static final int ab_background=0x7f020000;
@@ -240,134 +241,144 @@ in (inches), mm (millimeters).
         public static final int apptheme_textfield_disabled_focused_holo_light=0x7f020034;
         public static final int apptheme_textfield_disabled_holo_light=0x7f020035;
         public static final int apptheme_textfield_focused_holo_light=0x7f020036;
-        public static final int arrow_default=0x7f020037;
-        public static final int background=0x7f020038;
-        public static final int background_tile=0x7f020039;
-        public static final int bart_default=0x7f02003a;
-        public static final int batman_default=0x7f02003b;
-        public static final int bg=0x7f02003c;
-        public static final int binding_dark=0x7f02003d;
-        public static final int black_mamba=0x7f02003e;
-        public static final int btn_bg=0x7f02003f;
-        public static final int btn_bg_enabled=0x7f020040;
-        public static final int btn_bg_focused=0x7f020041;
-        public static final int btn_bg_selector=0x7f020042;
-        public static final int card_bg=0x7f020043;
-        public static final int card_bg2=0x7f020044;
-        public static final int card_bg_enabled=0x7f020045;
-        public static final int card_bg_focused=0x7f020046;
-        public static final int card_bg_selector=0x7f020047;
-        public static final int climpek=0x7f020048;
-        public static final int cream_pixels=0x7f020049;
-        public static final int dark_dotted2=0x7f02004a;
-        public static final int dark_exa=0x7f02004b;
-        public static final int default_contact=0x7f02004c;
-        public static final int dimension=0x7f02004d;
-        public static final int escheresque=0x7f02004e;
-        public static final int escheresque_ste=0x7f02004f;
-        public static final int gandalf_default=0x7f020050;
-        public static final int geometry=0x7f020051;
-        public static final int grey_diag_background=0x7f020052;
-        public static final int homer_default=0x7f020053;
-        public static final int ic_action_create_note=0x7f020054;
-        public static final int ic_action_overflow_round=0x7f020055;
-        public static final int ic_content_edit=0x7f020056;
-        public static final int ic_launcher=0x7f020057;
-        public static final int ic_listitem_edit=0x7f020058;
-        public static final int ic_navigation_accept=0x7f020059;
-        public static final int ic_sort=0x7f02005a;
-        public static final int light_grey=0x7f02005b;
-        public static final int mario_default=0x7f02005c;
-        public static final int moulin=0x7f02005d;
-        public static final int nistri=0x7f02005e;
-        public static final int not_found=0x7f02005f;
-        public static final int pixel_weave=0x7f020060;
-        public static final int playboy_default=0x7f020061;
-        public static final int popup_black=0x7f020062;
-        public static final int pw_maze_black=0x7f020063;
-        public static final int pw_maze_white=0x7f020064;
-        public static final int shattered=0x7f020065;
-        public static final int sidebar_shadow=0x7f020066;
-        public static final int skulls=0x7f020067;
-        public static final int spiderman_default=0x7f020068;
-        public static final int squared_metal=0x7f020069;
-        public static final int stardust=0x7f02006a;
-        public static final int tree_bark=0x7f02006b;
-        public static final int trooper_default=0x7f02006c;
+        public static final int background=0x7f020037;
+        public static final int background_tile=0x7f020038;
+        public static final int bg=0x7f020039;
+        public static final int binding_dark=0x7f02003a;
+        public static final int black_mamba=0x7f02003b;
+        public static final int btn_bg=0x7f02003c;
+        public static final int btn_bg_enabled=0x7f02003d;
+        public static final int btn_bg_focused=0x7f02003e;
+        public static final int btn_bg_selector=0x7f02003f;
+        public static final int card_bg=0x7f020040;
+        public static final int card_bg2=0x7f020041;
+        public static final int card_bg_enabled=0x7f020042;
+        public static final int card_bg_focused=0x7f020043;
+        public static final int card_bg_selector=0x7f020044;
+        public static final int climpek=0x7f020045;
+        public static final int cream_pixels=0x7f020046;
+        public static final int dark_dotted2=0x7f020047;
+        public static final int dark_exa=0x7f020048;
+        public static final int default_contact=0x7f020049;
+        public static final int dimension=0x7f02004a;
+        public static final int escheresque=0x7f02004b;
+        public static final int escheresque_ste=0x7f02004c;
+        public static final int geometry=0x7f02004d;
+        public static final int grey_diag_background=0x7f02004e;
+        public static final int ic_action_create_note=0x7f02004f;
+        public static final int ic_action_edit=0x7f020050;
+        public static final int ic_action_edit_dark=0x7f020051;
+        public static final int ic_action_overflow_round=0x7f020052;
+        public static final int ic_content_edit=0x7f020053;
+        public static final int ic_launcher=0x7f020054;
+        public static final int ic_listitem_edit=0x7f020055;
+        public static final int ic_navigation_accept=0x7f020056;
+        public static final int ic_sort=0x7f020057;
+        public static final int light_grey=0x7f020058;
+        public static final int moulin=0x7f020059;
+        public static final int nistri=0x7f02005a;
+        public static final int not_found=0x7f02005b;
+        public static final int pixel_weave=0x7f02005c;
+        public static final int pw_maze_black=0x7f02005d;
+        public static final int pw_maze_white=0x7f02005e;
+        public static final int shattered=0x7f02005f;
+        public static final int sidebar_shadow=0x7f020060;
+        public static final int skulls=0x7f020061;
+        public static final int squared_metal=0x7f020062;
+        public static final int stardust=0x7f020063;
+        public static final int tree_bark=0x7f020064;
+        public static final int underscore=0x7f020065;
     }
     public static final class id {
-        public static final int action_create=0x7f060037;
-        public static final int action_edit=0x7f060036;
-        public static final int action_settings=0x7f06003d;
-        public static final int addToDebt=0x7f06002e;
-        public static final int avatarImageView1=0x7f060017;
-        public static final int black=0x7f060003;
-        public static final int bold=0x7f060001;
-        public static final int clear_debt_button=0x7f06002d;
-        public static final int comment_title=0x7f060013;
-        public static final int comments=0x7f060014;
-        public static final int commentsText=0x7f06001a;
-        public static final int condensed=0x7f060004;
-        public static final int currentDebt=0x7f060035;
-        public static final int dbl_zero_btn=0x7f06002c;
-        public static final int debtText=0x7f060019;
-        public static final int debtor_name_title=0x7f06000e;
-        public static final int debtorsName=0x7f060034;
-        public static final int debtors_name=0x7f06000f;
-        public static final int decimal_btn=0x7f06002a;
-        public static final int editDebt1=0x7f060020;
-        public static final int editDebtImageView=0x7f06001d;
-        public static final int editDebtName=0x7f06001e;
-        public static final int eight_btn=0x7f060022;
-        public static final int empty_state=0x7f060009;
-        public static final int empty_state_body=0x7f06000b;
-        public static final int empty_state_title=0x7f06000a;
-        public static final int filter_spinner=0x7f06000d;
-        public static final int five_btn=0x7f060025;
-        public static final int four_btn=0x7f060024;
-        public static final int historyListView=0x7f06001b;
-        public static final int image_header=0x7f060030;
-        public static final int initial_debt=0x7f060012;
-        public static final int initial_debt_title=0x7f060011;
-        public static final int italic=0x7f060002;
-        public static final int light=0x7f060005;
-        public static final int lineGraph1=0x7f06001c;
-        public static final int listImageView=0x7f060033;
-        public static final int main_list=0x7f060008;
-        public static final int medium=0x7f060006;
-        public static final int menu_sort_AtoZ=0x7f060039;
-        public static final int menu_sort_HighToLow=0x7f06003c;
-        public static final int menu_sort_LowToHigh=0x7f06003b;
-        public static final int menu_sort_ZtoA=0x7f06003a;
-        public static final int menu_sorting_header=0x7f060038;
-        public static final int nameText=0x7f060018;
-        public static final int new_note_button=0x7f06000c;
-        public static final int nine_btn=0x7f060023;
-        public static final int normal=0x7f060000;
-        public static final int oldDebtValue=0x7f060032;
-        public static final int one_btn=0x7f060027;
-        public static final int pick_contact=0x7f060010;
-        public static final int previewImageView=0x7f060015;
-        public static final int save_debt=0x7f060016;
-        public static final int seven_btn=0x7f060021;
-        public static final int six_btn=0x7f060026;
-        public static final int subFromDebt=0x7f06002f;
-        public static final int textView1=0x7f06001f;
-        public static final int thin=0x7f060007;
-        public static final int three_btn=0x7f060029;
-        public static final int timestampTextView=0x7f060031;
-        public static final int two_btn=0x7f060028;
-        public static final int zero_btn=0x7f06002b;
+        public static final int action_create=0x7f070049;
+        public static final int action_edit=0x7f070048;
+        public static final int action_settings=0x7f07004f;
+        public static final int addImageView=0x7f07003b;
+        public static final int addToDebt=0x7f07003a;
+        public static final int avatarImageView1=0x7f070012;
+        public static final int black=0x7f070003;
+        public static final int bold=0x7f070001;
+        public static final int chartViewParent=0x7f070018;
+        public static final int clearImageView=0x7f070039;
+        public static final int clear_debt_btn=0x7f070038;
+        public static final int comment_title=0x7f07000d;
+        public static final int comments=0x7f07000e;
+        public static final int commentsText=0x7f070016;
+        public static final int commentsTextTitle=0x7f070015;
+        public static final int condensed=0x7f070004;
+        public static final int currentDebt=0x7f070047;
+        public static final int dblZeroImageView=0x7f070037;
+        public static final int dbl_zero_btn=0x7f070036;
+        public static final int debtDetailParentRelativeLayout=0x7f070011;
+        public static final int debtText=0x7f070014;
+        public static final int debtor_name_title=0x7f070008;
+        public static final int debtorsName=0x7f070046;
+        public static final int debtors_name=0x7f070009;
+        public static final int decimalImageView=0x7f070033;
+        public static final int decimal_btn=0x7f070032;
+        public static final int dollaSign=0x7f07001e;
+        public static final int editDebt1=0x7f07001f;
+        public static final int editDebtImageView=0x7f07001b;
+        public static final int editDebtName=0x7f07001d;
+        public static final int editDebtParentLayout=0x7f07001a;
+        public static final int editDebtRoundImageView=0x7f07001c;
+        public static final int eightImageView=0x7f070023;
+        public static final int eight_btn=0x7f070022;
+        public static final int fiveImageView=0x7f070029;
+        public static final int five_btn=0x7f070028;
+        public static final int fourImageView=0x7f070027;
+        public static final int four_btn=0x7f070026;
+        public static final int historyListView=0x7f070017;
+        public static final int imageColor0=0x7f07003e;
+        public static final int imageColor1=0x7f07003f;
+        public static final int imageColor2=0x7f070040;
+        public static final int imageColor3=0x7f070041;
+        public static final int image_header=0x7f070042;
+        public static final int initial_debt=0x7f07000c;
+        public static final int initial_debt_title=0x7f07000b;
+        public static final int italic=0x7f070002;
+        public static final int light=0x7f070005;
+        public static final int lineGraph1=0x7f070019;
+        public static final int listImageView=0x7f070045;
+        public static final int medium=0x7f070006;
+        public static final int menu_sort_AtoZ=0x7f07004b;
+        public static final int menu_sort_HighToLow=0x7f07004e;
+        public static final int menu_sort_LowToHigh=0x7f07004d;
+        public static final int menu_sort_ZtoA=0x7f07004c;
+        public static final int menu_sorting_header=0x7f07004a;
+        public static final int nameText=0x7f070013;
+        public static final int nineImageView=0x7f070025;
+        public static final int nine_btn=0x7f070024;
+        public static final int normal=0x7f070000;
+        public static final int oldDebtValue=0x7f070044;
+        public static final int oneImageView=0x7f07002d;
+        public static final int one_btn=0x7f07002c;
+        public static final int pick_contact=0x7f07000a;
+        public static final int previewImageView=0x7f07000f;
+        public static final int save_debt=0x7f070010;
+        public static final int sevenImageView=0x7f070021;
+        public static final int seven_btn=0x7f070020;
+        public static final int sixImageView=0x7f07002b;
+        public static final int six_btn=0x7f07002a;
+        public static final int subFromDebt=0x7f07003c;
+        public static final int subImageView=0x7f07003d;
+        public static final int thin=0x7f070007;
+        public static final int threeImageView=0x7f070031;
+        public static final int three_btn=0x7f070030;
+        public static final int timestampTextView=0x7f070043;
+        public static final int twoImageView=0x7f07002f;
+        public static final int two_btn=0x7f07002e;
+        public static final int zeroImageView=0x7f070035;
+        public static final int zero_btn=0x7f070034;
     }
     public static final class layout {
         public static final int activity_listview=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_new_debtor=0x7f030002;
-        public static final int debt_detail=0x7f030003;
-        public static final int edit_debt_layout=0x7f030004;
-        public static final int header=0x7f030005;
-        public static final int history_list_layout=0x7f030006;
-        public static final int list_item_layout=0x7f030007;
+        public static final int activity_new_debtor=0x7f030001;
+        public static final int debt_detail=0x7f030002;
+        public static final int edit_debt_layout=0x7f030003;
+        public static final int header=0x7f030004;
+        public static final int history_list_layout=0x7f030005;
+        public static final int list_item_layout=0x7f030006;
     }
     public static final class menu {
         public static final int edit_debt_menu=0x7f0c0000;
@@ -377,64 +388,44 @@ in (inches), mm (millimeters).
         public static final int debts=0x7f050000;
     }
     public static final class string {
-        public static final int action_create=0x7f070002;
-        public static final int action_save=0x7f070007;
-        public static final int add_debt_string=0x7f07000c;
-        public static final int app_name=0x7f070001;
-        public static final int debtors_name_hint_string=0x7f07000a;
-        public static final int edit_debt_string=0x7f070009;
-        public static final int edit_text_hint=0x7f070003;
-        public static final int empty_state_body_text=0x7f070005;
-        public static final int empty_state_title_text=0x7f070004;
-        public static final int new_note_button_text=0x7f070006;
-        public static final int pref_default_display_name=0x7f070012;
-        public static final int pref_description_social_recommendations=0x7f070010;
+        public static final int action_create=0x7f060002;
+        public static final int action_save=0x7f060007;
+        public static final int add_debt_string=0x7f06000c;
+        public static final int app_name=0x7f060000;
+        public static final int debtors_name_hint_string=0x7f06000a;
+        public static final int edit_debt_string=0x7f060009;
+        public static final int edit_text_hint=0x7f060003;
+        public static final int empty_state_body_text=0x7f060005;
+        public static final int empty_state_title_text=0x7f060004;
+        public static final int new_note_button_text=0x7f060006;
+        public static final int pref_default_display_name=0x7f060012;
+        public static final int pref_description_social_recommendations=0x7f060010;
         /**  Example settings for Data & Sync 
          */
-        public static final int pref_header_data_sync=0x7f070014;
+        public static final int pref_header_data_sync=0x7f060014;
         /**  Strings related to Settings 
  Example General settings 
          */
-        public static final int pref_header_general=0x7f07000e;
+        public static final int pref_header_general=0x7f06000e;
         /**  Example settings for Notifications 
          */
-        public static final int pref_header_notifications=0x7f070017;
-        public static final int pref_ringtone_silent=0x7f07001a;
-        public static final int pref_title_add_friends_to_messages=0x7f070013;
-        public static final int pref_title_display_name=0x7f070011;
-        public static final int pref_title_new_message_notifications=0x7f070018;
-        public static final int pref_title_ringtone=0x7f070019;
-        public static final int pref_title_social_recommendations=0x7f07000f;
-        public static final int pref_title_sync_frequency=0x7f070015;
-        public static final int pref_title_system_sync_settings=0x7f070016;
-        public static final int pref_title_vibrate=0x7f07001b;
-        public static final int release_signature=0x7f070000;
-        public static final int settings_string=0x7f070008;
-        public static final int subtract_from_debt_string=0x7f07000b;
-        public static final int title_activity_settings=0x7f07000d;
+        public static final int pref_header_notifications=0x7f060017;
+        public static final int pref_ringtone_silent=0x7f06001a;
+        public static final int pref_title_add_friends_to_messages=0x7f060013;
+        public static final int pref_title_display_name=0x7f060011;
+        public static final int pref_title_new_message_notifications=0x7f060018;
+        public static final int pref_title_ringtone=0x7f060019;
+        public static final int pref_title_social_recommendations=0x7f06000f;
+        public static final int pref_title_sync_frequency=0x7f060015;
+        public static final int pref_title_system_sync_settings=0x7f060016;
+        public static final int pref_title_vibrate=0x7f06001b;
+        public static final int release_signature=0x7f060001;
+        public static final int settings_string=0x7f060008;
+        public static final int subtract_from_debt_string=0x7f06000b;
+        public static final int title_activity_settings=0x7f06000d;
     }
     public static final class style {
         /** 
-        Base application theme, dependent on API level. This theme is replaced
-        by AppBaseTheme from res/values-vXX/styles.xml on newer devices.
-    
-
-            Theme customizations available in newer API levels can go in
-            res/values-vXX/styles.xml, while customizations related to
-            backward-compatibility can go here.
-        
-
-        Base application theme for API 11+. This theme completely replaces
-        AppBaseTheme from res/values/styles.xml on API 11+ devices.
-    
- API 11 theme customizations can go here. 
-
-        Base application theme for API 14+. This theme completely replaces
-        AppBaseTheme from BOTH res/values/styles.xml and
-        res/values-v11/styles.xml on API 14+ devices.
-    
- API 14 theme customizations can go here. 
-
         Base application theme for API 11+. This theme completely replaces
         AppBaseTheme from res/values/styles.xml on API 11+ devices.
     
@@ -446,25 +437,22 @@ in (inches), mm (millimeters).
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f080000;
-        /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
-         */
-        public static final int AppTheme=0x7f080001;
-        public static final int AppTheme_Light_TranslucentActionBar=0x7f08000d;
-        public static final int AppTheme_TranslucentActionBar=0x7f08000c;
-        public static final int AutoCompleteTextViewAppTheme=0x7f080008;
-        public static final int ButtonAppTheme=0x7f080009;
-        public static final int ImageButtonAppTheme=0x7f08000a;
-        public static final int OverFlow=0x7f08000f;
-        public static final int SpinnerAppTheme=0x7f08000b;
-        public static final int Widget=0x7f080002;
-        public static final int Widget_ActionBar=0x7f080003;
-        public static final int Widget_ActionBar_Transparent=0x7f080006;
-        public static final int Widget_Light=0x7f080004;
-        public static final int Widget_Light_ActionBar=0x7f080005;
-        public static final int Widget_Light_ActionBar_Transparent=0x7f080007;
-        public static final int _AppTheme=0x7f08000e;
+        public static final int AppBaseTheme=0x7f0b0006;
+        public static final int AppTheme=0x7f0b000b;
+        public static final int AppTheme_Light_TranslucentActionBar=0x7f0b000d;
+        public static final int AppTheme_TranslucentActionBar=0x7f0b000c;
+        public static final int AutoCompleteTextViewAppTheme=0x7f0b0007;
+        public static final int ButtonAppTheme=0x7f0b0008;
+        public static final int ImageButtonAppTheme=0x7f0b0009;
+        public static final int OverFlow=0x7f0b000f;
+        public static final int SpinnerAppTheme=0x7f0b000a;
+        public static final int Widget=0x7f0b0000;
+        public static final int Widget_ActionBar=0x7f0b0001;
+        public static final int Widget_ActionBar_Transparent=0x7f0b0004;
+        public static final int Widget_Light=0x7f0b0002;
+        public static final int Widget_Light_ActionBar=0x7f0b0003;
+        public static final int Widget_Light_ActionBar_Transparent=0x7f0b0005;
+        public static final int _AppTheme=0x7f0b000e;
     }
     public static final class xml {
         public static final int settings=0x7f040000;
